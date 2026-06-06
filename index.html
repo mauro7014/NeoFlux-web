@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title data-i18n="meta.title">NeoFlux — Software a Medida, Automatización & Inteligencia Artificial</title>
+  <meta name="description" data-i18n="meta.description" content="Desarrollamos software a medida, automatizaciones con IA, integraciones WhatsApp y sistemas empresariales." />
+  <meta name="keywords" content="desarrollo web, software a medida, automatización, inteligencia artificial, WhatsApp, NeoFlux" />
+  <meta name="author" content="NeoFlux" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://neoflux.tech/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neoflux.tech/" />
+  <meta property="og:title" content="NeoFlux — Software que trabaja por vos" />
+  <meta property="og:description" content="Automatizamos procesos, integramos IA y construimos sistemas que escalan." />
+  <meta property="og:image" content="https://neoflux.tech/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NeoFlux",
+    "url": "https://neoflux.tech",
+    "logo": "https://neoflux.tech/assets/logo.png",
+    "description": "Desarrollo de software a medida, automatización con IA e integraciones empresariales",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rosario",
+      "addressRegion": "Santa Fe",
+      "addressCountry": "AR"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="lang-bar">
+    <div class="lang-bar__inner">
+      <span>🌐</span>
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+    </div>
+  </div>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo" aria-label="NeoFlux - Inicio">
+        <img src="assets/logo.png" alt="NeoFlux" class="nav__logo-img" /><span class="nav__logo-text">NeoFlux</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#servicios" data-i18n="nav.services" class="nav__link">Servicios</a></li>
+        <li><a href="#beneficios" data-i18n="nav.benefits" class="nav__link">Beneficios</a></li>
+        <li><a href="#casos" data-i18n="nav.cases" class="nav__link">Casos de uso</a></li>
+        <li><a href="#trabajos" data-i18n="nav.works" class="nav__link">Trabajos</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact" class="nav__link nav__link--cta">Contacto</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#servicios" data-i18n="nav.services" class="nav__link">Servicios</a></li>
+        <li><a href="#beneficios" data-i18n="nav.benefits" class="nav__link">Beneficios</a></li>
+        <li><a href="#casos" data-i18n="nav.cases" class="nav__link">Casos de uso</a></li>
+        <li><a href="#trabajos" data-i18n="nav.works" class="nav__link">Trabajos</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact" class="nav__link">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="hero" class="hero">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="container hero__content">
+        <div class="hero__badge">
+          <span class="badge-dot"></span>
+          <span data-i18n="hero.badge">Disponibles para nuevos proyectos</span>
+        </div>
+        <h1 class="hero__title">
+          <span class="hero__title-line" data-i18n="hero.title_1">Software que trabaja</span>
+          <span class="hero__title-line hero__title-line--accent" data-i18n="hero.title_2">por vos.</span>
+        </h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Desarrollamos sistemas a medida, automatizamos procesos con IA e integramos WhatsApp en tu negocio. Sin tecnicismos. Con resultados.
+        </p>
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--primary" data-i18n="hero.cta_primary">Pedir presupuesto gratis</a>
+          <a href="#servicios" class="btn btn--ghost" data-i18n="hero.cta_secondary">Ver qué hacemos</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__number">50+</span>
+            <span class="stat__label" data-i18n="hero.stat_1">Proyectos entregados</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number">3</span>
+            <span class="stat__label" data-i18n="hero.stat_2">Países</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__number">100%</span>
+            <span class="stat__label" data-i18n="hero.stat_3">Código propio</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint"><span class="scroll-line"></span></div>
+    </section>
+
+    <section id="servicios" class="services section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="services.tag">Lo que hacemos</span>
+          <h2 data-i18n="services.title">Servicios diseñados<br>para escalar tu negocio</h2>
+          <p class="section-desc" data-i18n="services.desc">Cada solución está pensada para resolver un problema real, ahorrar tiempo y generar más ingresos.</p>
+        </div>
+        <div class="services__grid">
+          <article class="service-card" data-service="web">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3 data-i18n="services.web.title">Desarrollo Web</h3>
+            <p data-i18n="services.web.desc">Sitios, landing pages y aplicaciones web que convierten visitas en clientes. Rápidas, seguras y con SEO desde el primer día.</p>
+            <span class="service-card__tag">React · Next.js · HTML</span>
+          </article>
+          <article class="service-card" data-service="software">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 data-i18n="services.software.title">Software a Medida</h3>
+            <p data-i18n="services.software.desc">Sistemas internos, paneles de gestión, CRMs y ERPs adaptados exactamente a tu operación. No pagás por lo que no usás.</p>
+            <span class="service-card__tag">Node.js · Supabase · APIs</span>
+          </article>
+          <article class="service-card service-card--featured" data-service="ai">
+            <div class="service-card__badge" data-i18n="services.ai.badge">Más solicitado</div>
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3 data-i18n="services.ai.title">Inteligencia Artificial</h3>
+            <p data-i18n="services.ai.desc">Chatbots con IA, análisis de datos, generación de contenido y automatización inteligente usando los modelos más avanzados del mercado.</p>
+            <span class="service-card__tag">GPT-4 · Claude · Gemini</span>
+          </article>
+          <article class="service-card" data-service="automation">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V12M12 12L8 16M12 12L16 16"/><circle cx="12" cy="5" r="3"/><path d="M5 12a7 7 0 0 0 14 0"/></svg>
+            </div>
+            <h3 data-i18n="services.automation.title">Automatización</h3>
+            <p data-i18n="services.automation.desc">Eliminamos tareas repetitivas: facturación automática, reportes, sincronización de sistemas y workflows sin intervención humana.</p>
+            <span class="service-card__tag">Zapier · Make · Custom</span>
+          </article>
+          <article class="service-card" data-service="whatsapp">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 data-i18n="services.whatsapp.title">Integración WhatsApp</h3>
+            <p data-i18n="services.whatsapp.desc">Atención al cliente, ventas y soporte automatizados por WhatsApp Business API. Tu negocio disponible 24/7 sin contratar más personal.</p>
+            <span class="service-card__tag">WhatsApp API · Bots · CRM</span>
+          </article>
+          <article class="service-card" data-service="enterprise">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 data-i18n="services.enterprise.title">Sistemas Empresariales</h3>
+            <p data-i18n="services.enterprise.desc">Integraciones con ERP, sistemas de facturación AFIP, portales B2B y plataformas SaaS multitenancy escalables.</p>
+            <span class="service-card__tag">SaaS · Multi-tenant · B2B</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="benefits section">
+      <div class="container">
+        <div class="benefits__inner">
+          <div class="benefits__left">
+            <span class="section-tag" data-i18n="benefits.tag">Por qué elegirnos</span>
+            <h2 data-i18n="benefits.title">No somos una agencia.<br>Somos tu equipo tech.</h2>
+            <p data-i18n="benefits.desc">La diferencia entre un proveedor y un socio es que el socio entiende tu negocio antes de escribir una línea de código.</p>
+            <a href="#contacto" class="btn btn--primary" data-i18n="benefits.cta">Hablemos de tu proyecto</a>
+          </div>
+          <div class="benefits__right">
+            <div class="benefit-item">
+              <div class="benefit-item__icon">⚡</div>
+              <div>
+                <h3 data-i18n="benefits.speed.title">Entrega rápida</h3>
+                <p data-i18n="benefits.speed.desc">MVPs funcionales en 2–4 semanas. Sin promesas vacías. Con fechas reales.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item__icon">🔒</div>
+              <div>
+                <h3 data-i18n="benefits.ownership.title">Tu código, tuyo</h3>
+                <p data-i18n="benefits.ownership.desc">Todo el código fuente es tuyo desde el día 1. Sin lock-in, sin licencias ocultas.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item__icon">📈</div>
+              <div>
+                <h3 data-i18n="benefits.scale.title">Pensado para escalar</h3>
+                <p data-i18n="benefits.scale.desc">Arquitectura que crece con tu negocio. Pagás por lo que necesitás hoy.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item__icon">🌍</div>
+              <div>
+                <h3 data-i18n="benefits.global.title">Equipo internacional</h3>
+                <p data-i18n="benefits.global.desc">Trabajamos con clientes en Argentina, Italia y EEUU. Español, inglés, italiano.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos" class="cases section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="cases.tag">Casos de uso reales</span>
+          <h2 data-i18n="cases.title">Problemas que resolvemos<br>todos los días</h2>
+        </div>
+        <div class="cases__grid">
+          <article class="case-card">
+            <div class="case-card__industry" data-i18n="cases.hotel.industry">🏨 Hotelería</div>
+            <h3 data-i18n="cases.hotel.title">Check-in digital sin papel</h3>
+            <p data-i18n="cases.hotel.desc">Sistema de gestión hotelera con check-in QR, panel de staff, mensajería interna y facturación automática.</p>
+            <span class="result-badge" data-i18n="cases.hotel.result">−70% tiempo recepción</span>
+          </article>
+          <article class="case-card">
+            <div class="case-card__industry" data-i18n="cases.commerce.industry">🛒 Comercio</div>
+            <h3 data-i18n="cases.commerce.title">Catálogo y cotización por WhatsApp</h3>
+            <p data-i18n="cases.commerce.desc">Catálogo digital con panel de administración, generación de presupuestos en PDF y envío automático al cliente.</p>
+            <span class="result-badge" data-i18n="cases.commerce.result">3× más cotizaciones</span>
+          </article>
+          <article class="case-card">
+            <div class="case-card__industry" data-i18n="cases.services.industry">⚙️ Servicios</div>
+            <h3 data-i18n="cases.services.title">Bot de atención 24/7</h3>
+            <p data-i18n="cases.services.desc">Chatbot con IA entrenado en los productos y políticas de la empresa. Responde, toma turnos y escala a humano.</p>
+            <span class="result-badge" data-i18n="cases.services.result">80% consultas resueltas</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="process.tag">Cómo trabajamos</span>
+          <h2 data-i18n="process.title">De la idea al producto<br>en 4 pasos</h2>
+        </div>
+        <ol class="process__steps">
+          <li class="process-step">
+            <span class="process-step__num">01</span>
+            <div>
+              <h3 data-i18n="process.step1.title">Diagnóstico gratis</h3>
+              <p data-i18n="process.step1.desc">Analizamos tu negocio, tus procesos actuales y lo que querés lograr. Sin costo, sin compromiso.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">02</span>
+            <div>
+              <h3 data-i18n="process.step2.title">Propuesta técnica</h3>
+              <p data-i18n="process.step2.desc">Presentamos la arquitectura, tecnologías, tiempos y presupuesto detallado. Todo por escrito.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">03</span>
+            <div>
+              <h3 data-i18n="process.step3.title">Desarrollo iterativo</h3>
+              <p data-i18n="process.step3.desc">Entregas parciales cada semana. Podés ver el progreso y dar feedback en tiempo real.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">04</span>
+            <div>
+              <h3 data-i18n="process.step4.title">Lanzamiento y soporte</h3>
+              <p data-i18n="process.step4.desc">Deploy, capacitación y soporte post-lanzamiento incluido. No desaparecemos cuando entregamos.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══ TRABAJOS ══ -->
+    <section id="trabajos" class="works section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="works.tag">Proyectos reales</span>
+          <h2 data-i18n="works.title">Lo que ya construimos</h2>
+          <p class="section-desc" data-i18n="works.desc">Productos en producción, usados por clientes reales.</p>
+        </div>
+        <div class="works__grid">
+          <a href="https://veninomas.com" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__top">
+              <div class="work-card__dot"></div>
+              <span class="work-card__live" data-i18n="works.live">En vivo</span>
+            </div>
+            <h3>Vení Nomás</h3>
+            <p data-i18n="works.veninomas.desc">Guía digital de Rosario con eventos, lugares y experiencias locales. PWA con mapa interactivo.</p>
+            <div class="work-card__footer">
+              <span class="work-card__url">veninomas.com</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </div>
+          </a>
+          <a href="https://hostflux.tech" target="_blank" rel="noopener" class="work-card work-card--featured">
+            <div class="work-card__top">
+              <div class="work-card__dot"></div>
+              <span class="work-card__live" data-i18n="works.live">En vivo</span>
+            </div>
+            <h3>HOST — Intelligent Check-In</h3>
+            <p data-i18n="works.hostflux.desc">SaaS multi-tenant para gestión hotelera. Check-in QR, panel de staff, mensajería y pagos con Stripe.</p>
+            <div class="work-card__footer">
+              <span class="work-card__url">hostflux.tech</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact section">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__left">
+            <span class="section-tag" data-i18n="contact.tag">Contacto</span>
+            <h2 data-i18n="contact.title">Contanos tu proyecto.<br>Te respondemos en 24h.</h2>
+            <p data-i18n="contact.desc">Primera consulta gratuita. Sin presión, sin compromiso. Solo una conversación sobre cómo podemos ayudarte.</p>
+            <div class="contact__info">
+              <a href="mailto:hola@neoflux.tech" class="contact-info-item">
+                <span>✉️</span><span>hola@neoflux.tech</span>
+              </a>
+              <a href="https://wa.me/5493412603942" class="contact-info-item" target="_blank" rel="noopener">
+                <span>💬</span><span data-i18n="contact.whatsapp">Escribinos por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact__right">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" data-i18n="contact.form.name">Tu nombre</label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="Juan García" />
+                <span class="field-error" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="contact.form.email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="juan@empresa.com" />
+                <span class="field-error" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="service" data-i18n="contact.form.service">¿Qué necesitás?</label>
+                <select id="service" name="service" required>
+                  <option value="" data-i18n="contact.form.service_default">Seleccioná un servicio</option>
+                  <option value="web" data-i18n="contact.form.service_web">Desarrollo Web</option>
+                  <option value="software" data-i18n="contact.form.service_software">Software a Medida</option>
+                  <option value="ai" data-i18n="contact.form.service_ai">Inteligencia Artificial</option>
+                  <option value="automation" data-i18n="contact.form.service_automation">Automatización</option>
+                  <option value="whatsapp" data-i18n="contact.form.service_whatsapp">Integración WhatsApp</option>
+                  <option value="enterprise" data-i18n="contact.form.service_enterprise">Sistemas Empresariales</option>
+                  <option value="other" data-i18n="contact.form.service_other">Otro</option>
+                </select>
+                <span class="field-error" id="service-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="message" data-i18n="contact.form.message">Contanos tu proyecto</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Describí brevemente qué querés construir o automatizar..."></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                <span data-i18n="contact.form.submit">Enviar mensaje</span>
+              </button>
+              <p class="form-privacy" data-i18n="contact.form.privacy">🔒 Tus datos están seguros. No enviamos spam.</p>
+            </form>
+            <div class="form-success" id="form-success" hidden>
+              <div class="success-icon">✅</div>
+              <h3 data-i18n="contact.form.success_title">¡Mensaje recibido!</h3>
+              <p data-i18n="contact.form.success_desc">Te respondemos en menos de 24 horas. Revisá tu bandeja de entrada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="nav__logo" aria-label="NeoFlux inicio">
+          <img src="assets/logo.png" alt="NeoFlux" class="nav__logo-img" /><span class="nav__logo-text">NeoFlux</span>
+        </a>
+        <p data-i18n="footer.tagline">Software que trabaja por vos.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#trabajos" data-i18n="nav.works">Trabajos</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        <a href="https://veninomas.com" target="_blank" rel="noopener">veninomas.com</a>
+        <a href="https://hostflux.tech" target="_blank" rel="noopener">hostflux.tech</a>
+        <a href="mailto:hola@neoflux.tech">hola@neoflux.tech</a>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> NeoFlux. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5493412603942?text=Hola%20NeoFlux%2C%20me%20interesa%20hablar%20sobre%20un%20proyecto"
+     class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-fab__tooltip" data-i18n="whatsapp.tooltip">¿Hablamos?</span>
+  </a>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
