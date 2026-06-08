@@ -1012,3 +1012,18 @@ p  { color: var(--color-muted); line-height: 1.75; }
 .nav__logo {
   margin-left: -12px;
 }
+
+/* ══ HEADER AJUSTES ══ */
+.header {
+  background: rgba(9,9,15,1) !important;
+  backdrop-filter: none !important;
+  width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+.nav {
+  height: 80px !important;
+}
+.nav__logo-img {
+  height: 72px !important;
+}
