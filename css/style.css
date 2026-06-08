@@ -1027,3 +1027,8 @@ p  { color: var(--color-muted); line-height: 1.75; }
 .nav__logo-img {
   height: 72px !important;
 }
+
+/* ══ HEADER NEGRO PURO ══ */
+.header {
+  background: #000000 !important;
+}
