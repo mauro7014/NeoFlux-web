@@ -1,4 +1,3 @@
-cat > index.html << 'ENDOFFILE'
 <!DOCTYPE html>
 <html lang="es" data-lang="es">
 <head>
@@ -392,16 +391,32 @@ cat > index.html << 'ENDOFFILE'
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__links">
+
+      <nav class="footer__nav">
         <a href="#servicios" data-i18n="nav.services">Servicios</a>
         <a href="#trabajos" data-i18n="nav.works">Trabajos</a>
         <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-        <a href="https://veninomas.com" target="_blank" rel="noopener">veninomas.com</a>
-        <a href="https://hostflux.tech" target="_blank" rel="noopener">hostflux.tech</a>
-        <a href="mailto:neoflux2.0@gmail.com">neoflux2.0@gmail.com</a>
+        <a href="tel:+543412603942">Teléfono: +54 341 260 3942</a>
+        <a href="mailto:neoflux2.0@gmail.com">E-mail: neoflux2.0@gmail.com</a>
+      </nav>
+
+      <div class="footer__badges">
+        <span class="footer__badge-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Developer iOS
+        </span>
+        <span class="footer__badge-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M3.18 23.76c.3.17.64.22.98.15l11.53-11.53-2.9-2.9L3.18 23.76zM20.65 9.23l-2.37-1.37-3.26 3.26 3.26 3.26 2.4-1.38c.68-.4.68-1.4-.03-1.77zM2.01 1.47C1.97 1.62 2 1.77 2 1.95v20.1c0 .18.03.33.07.48l11.7-11.7L2.01 1.47zm15.16 8.28l-2.91-2.91L2.73.88C2.4.7 2.04.73 1.76.93l11.52 11.52 3.89-3.7z"/></svg>
+          Developer Android
+        </span>
+        <span class="footer__badge-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          Developer Web
+        </span>
       </div>
-      <p class="footer__dev">Developed by NeoFlux · Rosario, Argentina</p>
+
       <p class="footer__copy">© <span id="year"></span> NeoFlux. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+
     </div>
   </footer>
 
@@ -417,4 +432,3 @@ cat > index.html << 'ENDOFFILE'
   <script src="js/main.js"></script>
 </body>
 </html>
-ENDOFFILE
