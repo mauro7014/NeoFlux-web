@@ -1,6 +1,7 @@
+cat > js/main.js << 'ENDOFFILE'
 /* ══════════════════════════════════════════
    NEOFLUX — main.js
-   Nav · Scroll · Animaciones · Formulario
+   Nav · Scroll · Animaciones · Formulario → WhatsApp
 ══════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Cerrar al hacer click en un link
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Cerrar al hacer click fuera
   document.addEventListener('click', (e) => {
     if (!header.contains(e.target) && mobileMenu.classList.contains('open')) {
       mobileMenu.classList.remove('open');
@@ -72,25 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
      REVEAL — animación al hacer scroll
   ══════════════════════════════════════ */
   const revealTargets = [
-    '.service-card',
-    '.benefit-item',
-    '.case-card',
-    '.process-step',
-    '.section-header',
-    '.benefits__left',
-    '.contact__left',
-    '.contact-form'
+    '.service-card', '.benefit-item', '.case-card',
+    '.process-step', '.section-header', '.benefits__left',
+    '.contact__left', '.contact-form', '.work-card'
   ];
 
   const revealEls = document.querySelectorAll(revealTargets.join(','));
   revealEls.forEach(el => el.classList.add('reveal'));
 
   const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 80);
+        setTimeout(() => entry.target.classList.add('visible'), 80);
         revealObserver.unobserve(entry.target);
       }
     });
@@ -99,16 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
   revealEls.forEach(el => revealObserver.observe(el));
 
   /* ══════════════════════════════════════
-     STAGGER — cards con delay escalonado
+     STAGGER — delay escalonado en grillas
   ══════════════════════════════════════ */
-  document.querySelectorAll('.services__grid, .cases__grid, .process__steps').forEach(grid => {
+  document.querySelectorAll('.services__grid, .cases__grid, .process__steps, .works__grid').forEach(grid => {
     grid.querySelectorAll('.reveal').forEach((card, i) => {
       card.style.transitionDelay = `${i * 80}ms`;
     });
   });
 
   /* ══════════════════════════════════════
-     FORMULARIO DE CONTACTO
+     FORMULARIO → WHATSAPP
   ══════════════════════════════════════ */
   const form       = document.getElementById('contact-form');
   const successBox = document.getElementById('form-success');
@@ -116,7 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form) return;
 
-  /* Validación individual de campo */
+  const WHATSAPP_NUMBER = '5493412603942';
+
+  /* Etiquetas legibles para cada servicio */
+  const serviceLabels = {
+    web:        { es: 'Desarrollo Web',          en: 'Web Development',        it: 'Sviluppo Web' },
+    software:   { es: 'Software a Medida',        en: 'Custom Software',        it: 'Software Su Misura' },
+    ai:         { es: 'Inteligencia Artificial',  en: 'Artificial Intelligence', it: 'Intelligenza Artificiale' },
+    automation: { es: 'Automatización',           en: 'Automation',             it: 'Automazione' },
+    whatsapp:   { es: 'Integración WhatsApp',     en: 'WhatsApp Integration',   it: 'Integrazione WhatsApp' },
+    enterprise: { es: 'Sistemas Empresariales',   en: 'Enterprise Systems',     it: 'Sistemi Aziendali' },
+    other:      { es: 'Otro',                     en: 'Other',                  it: 'Altro' }
+  };
+
+  /* Validación de campo */
   function validateField(field) {
     const id    = field.id;
     const error = document.getElementById(id + '-error');
@@ -130,8 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const m = msgs[lang] || msgs.es;
 
     if (!error) return true;
-
-    // Reset
     error.textContent = '';
     field.style.borderColor = '';
 
@@ -142,8 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (field.type === 'email' && field.value.trim()) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(field.value.trim())) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
         error.textContent = m.email;
         field.style.borderColor = '#ff6b6b';
         return false;
@@ -154,74 +156,74 @@ document.addEventListener('DOMContentLoaded', () => {
     return true;
   }
 
-  /* Validar en tiempo real (blur) */
+  /* Validar en tiempo real */
   form.querySelectorAll('input, textarea, select').forEach(field => {
     field.addEventListener('blur', () => validateField(field));
     field.addEventListener('input', () => {
-      if (field.style.borderColor === 'rgb(255, 107, 107)') {
-        validateField(field);
-      }
+      if (field.style.borderColor === 'rgb(255, 107, 107)') validateField(field);
     });
   });
 
-  /* Submit */
-  form.addEventListener('submit', async (e) => {
+  /* Submit → WhatsApp */
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const fields  = form.querySelectorAll('input, textarea, select');
     let   isValid = true;
-
-    fields.forEach(field => {
-      if (!validateField(field)) isValid = false;
-    });
-
+    fields.forEach(field => { if (!validateField(field)) isValid = false; });
     if (!isValid) return;
 
-    /* Estado: enviando */
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
-    submitBtn.querySelector('span').textContent =
-      document.documentElement.getAttribute('data-lang') === 'it' ? 'Invio...' :
-      document.documentElement.getAttribute('data-lang') === 'en' ? 'Sending...' :
-      'Enviando...';
+    const lang    = document.documentElement.getAttribute('data-lang') || 'es';
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
 
-    /* Simulación de envío — reemplazá con tu backend/Formspree/EmailJS */
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const serviceLabel = service && serviceLabels[service]
+      ? serviceLabels[service][lang] || serviceLabels[service].es
+      : service;
 
-    /* Éxito */
-    form.hidden      = true;
+    /* Armar mensaje según idioma */
+    let waMsg = '';
+    if (lang === 'en') {
+      waMsg = `Hello NeoFlux! 👋\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${serviceLabel}\n\n*Project:*\n${message}`;
+    } else if (lang === 'it') {
+      waMsg = `Ciao NeoFlux! 👋\n\n*Nome:* ${name}\n*Email:* ${email}\n*Servizio:* ${serviceLabel}\n\n*Progetto:*\n${message}`;
+    } else {
+      waMsg = `Hola NeoFlux! 👋\n\n*Nombre:* ${name}\n*Email:* ${email}\n*Servicio:* ${serviceLabel}\n\n*Proyecto:*\n${message}`;
+    }
+
+    const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+
+    /* Mostrar éxito y abrir WhatsApp */
+    form.hidden       = false;
     successBox.hidden = false;
+    successBox.style.marginTop = '20px';
 
-    /* Reset por si el usuario vuelve atrás */
+    setTimeout(() => {
+      window.open(waURL, '_blank');
+    }, 600);
+
+    /* Reset después de 6 segundos */
     setTimeout(() => {
       form.reset();
-      form.hidden       = false;
       successBox.hidden = true;
-      submitBtn.disabled  = false;
-      submitBtn.style.opacity = '';
-
-      const lang = document.documentElement.getAttribute('data-lang') || 'es';
-      submitBtn.querySelector('span').textContent =
-        lang === 'it' ? 'Invia messaggio' :
-        lang === 'en' ? 'Send message' :
-        'Enviar mensaje';
-
+      successBox.style.marginTop = '';
       form.querySelectorAll('input, textarea, select').forEach(f => {
         f.style.borderColor = '';
       });
-    }, 8000);
+    }, 6000);
   });
 
   /* ══════════════════════════════════════
-     SMOOTH SCROLL — offset por header fijo
+     SMOOTH SCROLL — offset header fijo
   ══════════════════════════════════════ */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const offset = 110;
-      const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - 110;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
@@ -230,11 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
      COUNTER — animar números del hero
   ══════════════════════════════════════ */
   function animateCounter(el, target, suffix = '') {
-    let start    = 0;
-    const duration = 1500;
-    const step   = 16;
-    const increment = target / (duration / step);
-
+    let start = 0;
+    const increment = target / (1500 / 16);
     const timer = setInterval(() => {
       start += increment;
       if (start >= target) {
@@ -243,19 +242,18 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         el.textContent = Math.floor(start) + suffix;
       }
-    }, step);
+    }, 16);
   }
 
   const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const nums = entry.target.querySelectorAll('.stat__number');
-        nums.forEach(el => {
+        entry.target.querySelectorAll('.stat__number').forEach(el => {
           const text = el.textContent.trim();
-          if (text.includes('+')) animateCounter(el, parseInt(text), '+');
+          if (text.includes('+'))      animateCounter(el, parseInt(text), '+');
           else if (text.includes('%')) animateCounter(el, parseInt(text), '%');
-          else if (text.includes('×')) animateCounter(el, parseInt(text), '×');
-          else animateCounter(el, parseInt(text), '');
+          else if (text.includes('×'))animateCounter(el, parseInt(text), '×');
+          else                         animateCounter(el, parseInt(text), '');
         });
         statsObserver.unobserve(entry.target);
       }
@@ -266,3 +264,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroStats) statsObserver.observe(heroStats);
 
 });
+ENDOFFILE
