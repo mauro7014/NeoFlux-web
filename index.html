@@ -1,3 +1,4 @@
+cat > index.html << 'ENDOFFILE'
 <!DOCTYPE html>
 <html lang="es" data-lang="es">
 <head>
@@ -58,6 +59,7 @@
         <li><a href="#beneficios" data-i18n="nav.benefits" class="nav__link">Beneficios</a></li>
         <li><a href="#casos" data-i18n="nav.cases" class="nav__link">Casos de uso</a></li>
         <li><a href="#trabajos" data-i18n="nav.works" class="nav__link">Trabajos</a></li>
+        <li><a href="#quienes" data-i18n="nav.about" class="nav__link">Quiénes somos</a></li>
         <li><a href="#contacto" data-i18n="nav.contact" class="nav__link nav__link--cta">Contacto</a></li>
       </ul>
       <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
@@ -70,6 +72,7 @@
         <li><a href="#beneficios" data-i18n="nav.benefits" class="nav__link">Beneficios</a></li>
         <li><a href="#casos" data-i18n="nav.cases" class="nav__link">Casos de uso</a></li>
         <li><a href="#trabajos" data-i18n="nav.works" class="nav__link">Trabajos</a></li>
+        <li><a href="#quienes" data-i18n="nav.about" class="nav__link">Quiénes somos</a></li>
         <li><a href="#contacto" data-i18n="nav.contact" class="nav__link">Contacto</a></li>
       </ul>
     </div>
@@ -325,6 +328,40 @@
       </div>
     </section>
 
+    <!-- ══ QUIÉNES SOMOS ══ -->
+    <section id="quienes" class="about section">
+      <div class="container">
+        <div class="about__inner">
+          <div class="about__left">
+            <span class="section-tag" data-i18n="about.tag">Quiénes somos</span>
+            <h2 data-i18n="about.title">Tecnología que trabaja<br>para las personas.</h2>
+            <p data-i18n="about.desc">Somos un equipo de desarrolladores apasionados por resolver problemas reales. Trabajamos desde Rosario, Argentina, con clientes en tres continentes. Entendemos tu negocio antes de escribir una línea de código.</p>
+          </div>
+          <div class="about__right">
+            <div class="about__player">
+              <div class="player__visual">
+                <div class="player__ring player__ring--1"></div>
+                <div class="player__ring player__ring--2"></div>
+                <div class="player__ring player__ring--3"></div>
+                <button class="player__btn" id="play-btn" aria-label="Reproducir nuestra historia">
+                  <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+              </div>
+              <div class="player__info">
+                <p class="player__label" data-i18n="about.player_label">Escuchá nuestra historia</p>
+                <div class="player__bar">
+                  <div class="player__progress" id="player-progress"></div>
+                </div>
+                <p class="player__time" id="player-time">0:00</p>
+              </div>
+              <audio id="neoflux-audio" src="assets/neoflux-story.mp3" preload="metadata"></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="contact section">
       <div class="container">
         <div class="contact__inner">
@@ -391,7 +428,6 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-
       <nav class="footer__nav">
         <a href="#servicios" data-i18n="nav.services">Servicios</a>
         <a href="#trabajos" data-i18n="nav.works">Trabajos</a>
@@ -399,7 +435,6 @@
         <a href="tel:+543412603942">Teléfono: +54 341 260 3942</a>
         <a href="mailto:neoflux2.0@gmail.com">E-mail: neoflux2.0@gmail.com</a>
       </nav>
-
       <div class="footer__badges">
         <span class="footer__badge-item">
           <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -414,9 +449,7 @@
           Developer Web
         </span>
       </div>
-
       <p class="footer__copy">© <span id="year"></span> NeoFlux. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
-
     </div>
   </footer>
 
@@ -432,3 +465,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+ENDOFFILE
