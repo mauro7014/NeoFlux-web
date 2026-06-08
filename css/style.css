@@ -995,3 +995,20 @@ p  { color: var(--color-muted); line-height: 1.75; }
   font-family: var(--font-display);
   letter-spacing: 0.05em;
 }
+
+/* ══ HEADER FIJO ══ */
+.header {
+  position: fixed !important;
+  top: 36px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(9,9,15,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ══ LOGO TEXTO POSICIÓN ══ */
+.nav__logo {
+  margin-left: -12px;
+}
